@@ -9,11 +9,38 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.remove('dark-mode');
       }
     }
-  
     // Call the function to set initial dark mode based on system settings
     darkModeSystemSettings();
   });
   
+
+
+
+// Made an array for each arrow at the end of the sections and  each section ID
+const arrowDownIds = ['arrow-down-1', 'arrow-down-2', 'arrow-down-3'];
+const nextSectionIds = ['section-1', 'section-2', 'section-3'];
+
+// Loops through the arrays and adds event listeners to each arrow
+arrowDownIds.forEach((id, index) => {
+  const arrow = document.getElementById(id);
+  const section = document.getElementById(nextSectionIds[index]);
+  arrow.addEventListener('click', function() {
+    section.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   //Dark-mode
   const toggleBtn = document.querySelector('.input');
