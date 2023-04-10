@@ -17,7 +17,7 @@ body {
     --background-color-light: rgb(180, 222, 97);
     --project-card-background-light: rgb(2, 78, 74);
     --text-background-light: linear-gradient(45deg, pink, green, skyblue, #3EB489, green );
-   
+    --text-background-dark: linear-gradient(45deg, green, #3EB489, skyblue, green, pink)
 }
 
 .dark-mode {
@@ -26,7 +26,7 @@ body {
      --background-color-light: rgb(2, 78, 74);
      --project-card-background-light: rgb(180, 222, 97);
      --text-background-light: linear-gradient(45deg, green, #3EB489, skyblue, green, pink);
-     
+     --text-background-dark: linear-gradient(45deg, pink, green, skyblue, #3EB489, green );
 }
 
 
@@ -112,6 +112,16 @@ nav a {
     margin-right: 10px;
 }
 
+nav a:hover {
+    transform: translateY(-5px);
+    background: var(--text-background-light);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: 0.3s;
+}
+
+
 .nav-container {
     width: 20%;
     display: flex;
@@ -134,11 +144,20 @@ nav a {
     border: 1px solid var(--font-color-light);
     padding: 10px;
     border-radius: 7px;
+
+    
+    
 }
 
 .resume-nav:hover {
-    background-color: var(--font-color-light);
+    background-color: var(--font-color-light) ;
     color: var(--background-color-light);
+    
+    background: var(--text-background-dark);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: 0.3s;
 }
 
 .burger-container {
@@ -160,6 +179,8 @@ nav a {
 /*nav for mobile screens*/
 @media only screen and (max-width: 768px) {
     
+
+
     .main-nav {
         display: flex;
         justify-content: space-between;
@@ -171,8 +192,6 @@ nav a {
     .main-nav {
         display: none;
     }
-
-    
 
     
 
@@ -274,6 +293,7 @@ nav a {
     align-items: center;
     justify-content: center;
     padding: 3rem;
+    text-align: center;
 }
 
 .socials {
@@ -716,8 +736,8 @@ hr {
 	display: flex;
 	background-color: transparent;
 	box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-	transition: --project-card-background-light 0.25s;
-    border-radius: 7px;
+	
+    
     margin-bottom: 100px;
     outline: 2px solid var(--font-color-light);
 }
@@ -726,11 +746,7 @@ hr {
     
 }
 
-.card__image img {
-   border-radius: 7px;
-   
-   
-}
+
 
 .tech-used {
     display: inline-block;
@@ -744,7 +760,8 @@ hr {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	mix-blend-mode: var(--blend-mode);
+	
+    outline: 2px solid var(--font-color-light);
 }
 .card__body {
 	flex: 1;
@@ -793,3 +810,92 @@ hr {
 	}
 }
 /*End of styling for projects*/
+
+
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    overflow: auto;
+    
+    
+  }
+
+  
+  
+  .modal-content {
+    background-color: var(--background-color-light);
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid var(--font-color-light);
+    width: 80%;
+    max-width: 600px;
+    border-radius: 7px;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal-header h2 {
+    margin: 0;
+    color: var(--font-color-light);
+  }
+  
+  .modal-body p {
+    margin-top: 0;
+    color: var(--font-color-light);
+  }
+  
+  .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .modal-footer button {
+    margin-left: 10px;
+  }
+  
+  
+  textarea {
+    width: 100%;
+    font-family: Questrial, 'Times New Roman', sans-serif;
+    font-size: 1rem;
+  }
+
+  .modal-body {
+    width: 100%;
+  }
+
+
+
+/* Lets connect section */
+
+.connect-header {
+    text-align: center;
+}
+
+.connect-button {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 80px 0;
+}
+
+.connect-button button {
+    padding:  0 80px;
+    transition: 0.3s;
+}

@@ -18,7 +18,7 @@
     transform: translateX(0);
 }
 
-.show {
+.show2 {
     opacity: 1;
     filter: blur(0);
     transform: translateY(0);
@@ -39,4 +39,27 @@
     hidden {
         transition: none;
     }
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .hidden2 {
+        transition: none;
+        transform: none;
+        filter: none;
+    }
+
+    .show {
+        opacity: none;
+        filter:none;
+        transform: none;
+    }
+    
+    .show {
+        opacity: none;
+        filter:none;
+        transform: none;
+    }
+    
+
 }
