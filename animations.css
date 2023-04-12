@@ -24,11 +24,11 @@
     transform: translateY(0);
 }
 
-.banner:nth-child(2), .about-me:nth-child(2) {
+.banner:nth-child(2) {
     transition-delay: 200ms;
 }
 
-.banner:nth-child(3), .about-me:nth-child(3) {
+.banner:nth-child(3) {
     transition-delay: 400ms;
 }
 
