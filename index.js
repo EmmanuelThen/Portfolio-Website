@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Made an array for each arrow at the end of the sections and  each section ID
 const arrowDownIds = ['arrow-down-1', 'arrow-down-2', 'arrow-down-3'];
-const navDownIds = ['nav-down-1', 'nav-down-2', 'nav-down-3']
+const navDownIds = ['nav-down-1', 'nav-down-2', 'nav-down-3'];
 const nextSectionIds = ['section-1', 'section-2', 'section-3'];
 
 // Loops through the arrays and adds event listeners to each arrow
